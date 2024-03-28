@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import ShowListOfComponents from "./ShowListofComponents/ShowListOfComponents";
 
 function App() {
   return (
-    <div >
-      <h1>hello</h1>
+    <div >  
+      <ShowListOfComponents/>
     </div>
   );
 }
