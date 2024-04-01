@@ -1,6 +1,6 @@
 import React from 'react'
 
-function RoundedButton({tittle,color,btn,handleClick}) {
+function RoundedButton({tittle,btn,handleClick}) {
 
     return (
         <>

@@ -3,9 +3,15 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.sidebar-lable{
-    @apply flex gap-4 items-center font-normal  text-base text-black;
+.sidebar-lable {
+  @apply flex gap-4 items-center font-normal text-base text-black;
 }
-/* .sidebar-logo{
-    @apply w-9 h-9;
-} */
+
+nav a.active {
+  color: #4F8BED;
+}
+
+nav .active-logo svg{
+  fill: red; /* Change the fill color of the SVG */
+  stroke: blue;
+}

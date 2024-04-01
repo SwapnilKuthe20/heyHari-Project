@@ -18,7 +18,7 @@ function ProductTableMain() {
     ]
     return (
         <>
-            <ProductTable   ProductTableData={ProductTableData}/>
+            <ProductTable  ProductTableData={ProductTableData}/>
         </>
     )
 }

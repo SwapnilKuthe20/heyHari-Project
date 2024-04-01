@@ -4,6 +4,7 @@ import { homeIcon, dashboardIcon, inventoryIcon, createIcon, searchIcon, profile
 import { customerCareImage } from './Assets/Images';
 import { Routes, Route } from 'react-router-dom';
 import ShowListOfComponent from "./ShowListOfComponent/ShowListOfComponent";
+import LogIn from "./Components/LogIn";
 
 function App() {
   const NavLinks = [
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex">
         <Sidebar NavLinks={NavLinks} />
         <Routes>
           {
@@ -32,6 +33,10 @@ function App() {
         </Routes>
         <ShowListOfComponent />
       </div>
+
+
+      <LogIn />
+
     </>
   );
 }
