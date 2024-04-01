@@ -1,3 +1,1 @@
-import searchIcon from './searchIcon.svg'
-
-export { searchIcon }
+export {default as searchIcon} from "./searchIcon.svg"

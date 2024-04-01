@@ -1,12 +1,15 @@
 import './App.css';
-import ShowListOfComponents from "./ShowListofComponents/ShowListOfComponents";
+
+import ShowListOfComponent from "./ShowListOfComponent/ShowListOfComponent";
 
 function App() {
   return (
     <div >  
-      <ShowListOfComponents/>
+      <ShowListOfComponent/>
+    
     </div>
   );
 }
 
 export default App;
+
