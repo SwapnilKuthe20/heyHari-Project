@@ -1,5 +1,5 @@
 import React from 'react'
-import { searchIcon } from '../assets/icons'
+import { searchIcon } from '../Assets/Icons'
 
 const Searchbar = ({ className, placeholder, handleSearch,value }) => {
   
