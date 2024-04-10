@@ -1,10 +1,10 @@
 import React from 'react'
 
-function RoundedButton({tittle,btn,handleClick}) {
+function RoundedButton({ tittle, onClick, Style, disabled }) {
 
     return (
         <>
-            <button className= {`${btn ?"" : ""} bg-[#EBF2FF] font-normal text-base py-2 px-16 rounded-2xl`} onClick={handleClick}>
+            <button className={` ${Style}  `} onClick={onClick} disabled={disabled}>
                 {tittle}
             </button>
         </>

@@ -1,0 +1,8 @@
+export {default as Battery} from './Battery.png'
+export {default as Lubricant} from './Lubricant.png'
+export {default as SparePart} from './SparePart.png'
+export {default as Tyre} from './Tyre.png'
+export {default as Tractor} from './Tractor.png'
+export {default as Truck} from './Truck.png'
+export {default as Car} from './Car.png'
+export {default as Bike} from './Bike.png'

@@ -1,26 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { logoImage } from '../Assets/Images';
+import { homeIcon, dashboardIcon, inventoryIcon, createIcon, searchIcon, profileIcon, notificationIcon } from '../Assets/Icons';
+import { customerCareImage } from '../Assets/Images'
 
-function Sidebar({ NavLinks }) {
+function Sidebar() {
 
-  const [svgColor, setSvgColor]=useState("Black")
+  const NavLivksData = [
+    { path: '/home', logo: homeIcon, label: 'Home' },
+    { path: '/dashboard', logo: dashboardIcon, label: 'Dashboard' },
+    { path: '/create', logo: createIcon, label: 'Create' },
+    { path: '/search', logo: searchIcon, label: 'Search' },
+    { path: '/profile', logo: profileIcon, label: 'Profile' },
+    { path: '/inventory', logo: inventoryIcon, label: 'Inventory' },
+    { path: '/notification', logo: notificationIcon, label: 'Notifications' },
+    { path: '/customercare', logo: customerCareImage, label: 'Customer Care' },
+  ];
+  
   return (
     <>
-      <nav className='w-[235px] h-[100vh] border-r px-10 pt-2.5'>
-        <div className='w-[155px] h-[60px] flex'>
-          <NavLink to="/" ClassName="">
-            <img src={logoImage} alt="" className='w-100' />
+      <nav className='w-[244px] sticky top-0 right-0 border-r px-10 pt-2.5  '>
+        <div className='mb-10'>
+          <NavLink to="/" >
+            <img src={logoImage} alt="" width="155" height="60" />
           </NavLink>
         </div>
-        <ul className='pt-10'>
+
+        <ul>
           {
-            NavLinks?.map((item, index) => {
+            NavLivksData?.map((navlinks) => {
+              const { path, logo, label } = navlinks;
               return (
-                <li key={index}>
-                  <NavLink to={item?.path} className='sidebar-lable pb-5'>
-                    <img src={item?.icon} alt="" width={26} height={26}   />
-                    {item?.element}
+
+                <li className='mt-5' >
+                  <NavLink to={path} className='flex gap-3 sidebar-lable '>
+                    <img src={logo} alt="" width='24' height='24' />
+                    <h3 className=''>{label}</h3>
                   </NavLink>
                 </li>
               )
@@ -31,5 +46,4 @@ function Sidebar({ NavLinks }) {
     </>
   )
 }
-
 export default Sidebar

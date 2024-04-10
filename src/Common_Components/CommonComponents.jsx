@@ -64,8 +64,8 @@ function CommonComponents() {
   ]
 
   const imageUrls = [{ src: Ellipseimg1 },
-  // { src: Ellipseimg2 }, { src: Ellipseimg3 }, { src: Ellipseimg4 }, { src: Ellipseimg5 },
-  // { src: Ellipseimg6 }, { src: Ellipseimg7 }, { src: Ellipseimg8 }, { src: Ellipseimg9 }, { src: Ellipseimg10 }
+    // { src: Ellipseimg2 }, { src: Ellipseimg3 }, { src: Ellipseimg4 }, { src: Ellipseimg5 },
+    // { src: Ellipseimg6 }, { src: Ellipseimg7 }, { src: Ellipseimg8 }, { src: Ellipseimg9 }, { src: Ellipseimg10 }
   ]
 
   const dummydata = [
@@ -90,17 +90,17 @@ function CommonComponents() {
 
   const languagecardData = [
     { backgroundColor: "#E9ABFF", text: "English", languageicon: "En" },
-    // {backgroundColor:"#D0FFAB", text:"Hindi", subtext:"हिन्दी", languageicon:"हि" },
-    // {backgroundColor:"#9494FF", text:"Assamese", subtext:"অসমীয়া", languageicon:"অ"},
-    // {backgroundColor:"#FFEDAB", text:"Marathi", subtext:"मराठी", languageicon:"म" },
-    // {backgroundColor:"#ABFFBE", text:"Bengali", subtext:"বাংলা", languageicon:"বা"},
-    // {backgroundColor:"#ABEBFF", text:"Gujrati", subtext:"ગુજરાતી", languageicon:"ગ"},
-    // {backgroundColor:"#ADABFF", text:"Kanada", subtext:"ಕನ್ನಡ", languageicon:"ಕ"},
-    // {backgroundColor:"#D0ABFF", text:"Malayalam", subtext:"മലയാളം", languageicon:"മ"},
-    // {backgroundColor:"#FFABC9", text:"Tamil", subtext:"தமிழ்", languageicon:"த"},
-    // {backgroundColor:"#FFABAB", text:"Telugu", subtext:"తెలుగు", languageicon:"తె"},
+    { backgroundColor: "#D0FFAB", text: "Hindi", subtext: "हिन्दी", languageicon: "हि" },
+    { backgroundColor: "#9494FF", text: "Assamese", subtext: "অসমীয়া", languageicon: "অ" },
+    { backgroundColor: "#FFEDAB", text: "Marathi", subtext: "मराठी", languageicon: "म" },
+    { backgroundColor: "#ABFFBE", text: "Bengali", subtext: "বাংলা", languageicon: "বা" },
+    { backgroundColor: "#ABEBFF", text: "Gujrati", subtext: "ગુજરાતી", languageicon: "ગ" },
+    { backgroundColor: "#ADABFF", text: "Kanada", subtext: "ಕನ್ನಡ", languageicon: "ಕ" },
+    { backgroundColor: "#D0ABFF", text: "Malayalam", subtext: "മലയാളം", languageicon: "മ" },
+    { backgroundColor: "#FFABC9", text: "Tamil", subtext: "தமிழ்", languageicon: "த" },
+    { backgroundColor: "#FFABAB", text: "Telugu", subtext: "తెలుగు", languageicon: "తె" },
   ]
-  
+
   console.log(imageUrls);
   return (
     <div>
@@ -112,12 +112,13 @@ function CommonComponents() {
           )
         })}
       </Routes>
-      <Textfield name={"name"} placeholder={"phone"} type={"tel"} value={input.name} handleChange={handleChange} />
-      <RoundedImage imageUrls={imageUrls} alt={"rounded_image"}  />
-      <Badge value={dummydata.length} className={"top-[135px] left-12 "}/>
+
+      <Textfield name={"name"} className placeholder={"phone"} type={"tel"} value={input.name} handleChange={handleChange} />
+      <RoundedImage imageUrls={imageUrls} alt={"rounded_image"} />
+      <Badge value={dummydata.length} className={"top-[135px] left-12 "} />
       <SquareButtons type="submit" onClick={handleClick} title="My Buyers" isActive={isActive} />
       <Searchbar placeholder="search" value={search} handleSearch={handleSearch} />
-      <LanguageCard  handleCardclick={handleCardclick} Activecard={Activecard} languagecardData={languagecardData} /> 
+      <LanguageCard handleCardclick={handleCardclick} Activecard={Activecard} languagecardData={languagecardData} />
       <div className='flex'>
         {[...Array(5)].map((element, index) => {
           let number = index + 0.5;

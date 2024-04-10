@@ -17,7 +17,7 @@ function TextAreaFieldMain() {
 
     return (
         <>
-            <TextAreaField name={"name"} placeholder={"Enter Message....."} width={"285px"} height={"100px"} value={textArea.name} handleTextArea={handleTextArea} />
+            <TextAreaField name="name" placeholder={"Enter Message....."} width={"285px"} height={"100px"} value={textArea.name} handleTextArea={handleTextArea} />
         </>
     )
 }

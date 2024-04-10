@@ -1,14 +1,46 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import {myProfileLogo,walletLogo,segmentLogo,languageLogo,certificateLogo,inviteBuyerLogo,myPostLogo,savedDrafts,faqLogo,deactivateAccLogo,deleteAccLogo,logoutLogo} from '../../Assets/Icons/ProfileLogo';
 
 function Profile() {
+  const profileItems = [
+    { id: 1, path: '/myprofile', profileData: null, label: "My Profile", img: myProfileLogo },
+    { id: 2, path: '/mywallet', color: "green", profileData: '₹10143.00', label: "My Wallet", img: walletLogo },
+    { id: 3, path: '/myseg', profileData: null, label: "My Segments & Categories", img: segmentLogo },
+    { id: 4, path: '/mypreferredlanguage', profileData: null, label: "My Preferred Language", img: languageLogo },
+    { id: 5, path: '/managecertifications', profileData: null, label: "Manage Certificates", img: certificateLogo },
+    { id: 6, path: '/invitebuyers', profileData: null, label: "Invite Buyers and Set Credit Limit", img: inviteBuyerLogo },
+    { id: 7, path: '/mypost', profileData: "123", label: "My Posts", img: myPostLogo },
+    { id: 8, path: '/saveddrafts', profileData: "2", label: "Saved Drafts", img: savedDrafts },
+    { id: 9, path: '/faqs', profileData: null, label: "FAQ’s", img: faqLogo },
+    { id: 10, path: '/deactivateaccount', profileData: null, label: "Deactivate Account", img: deactivateAccLogo },
+    { id: 11, path: '/deleteaccount', profileData: null, label: "Delete Account", img: deleteAccLogo },
+    { id: 12, path: '/logout', profileData: null, label: "Logout", img: logoutLogo }
+  ];
+  
   return (
-    <>
-      <div className='flex  flex-col'>
-        <h2 className='text-center pt-5'>I am in Profile Component</h2>
-        <p className='m-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis laboriosam ilique amet aperiam atque nulla praesentium accusamus facilis odit in laborum placeat voluptatum? Commodi, asperiores iste inventore reiciendis vitae laudantium, a dicta rem consequuntur, quia doloremque quidem. A dolorem minus asperiores laudantium nam delectus inventore, exercitationem ratione perspiciatis doloribus, est repudiandae ab quo vitae placeat quod ut maiores dolores pariatur nemo minima, praesentium consequuntur voluptates vero! Ullam molestiae delectus quas officiis error impedit rerum veniam consequuntur laboriosam sed perspiciatis suscipit laudantium fugit non ad obcaecati nemo vero, quae ex in nostrum. Deleniti nam maiores, facilis, excepturi magnam recusandae culpa autem aspernatur mollitia, sequi ullam. Atque impedit odit sed unde eum, minus ad ducimus asperiores eos deleniti velit odio aliquam? Porro reiciendis iste molestiae cupiditate optio dicta. Numquam distinctio commodi unde doloribus tenetur aperiam quae, ipsa non molestiae similique facilis quo repudiandae accusantium necessitatibus cum consectetur repellendus reiciendis culpa officiis iste accusamus assumenda! A tenetur non architecto at maiores. Eveniet excepturi, assumenda quaerat cumque sed saepe officiis qui, sint laboriosam inventore distinctio odio delectus placeat dolores enim doloremque id cupiditate veniam! Tempora animi fuga quo nihil.</p>
-      </div>
-    </>
-  )
+    <ul className='ps-10 pt-10 pe-6 border-r border-[#D9D9D9]'>
+      {
+        profileItems?.map((items) => {
+          const { id, path, profileData, label, img, color } = items
+          return (
+
+            <li key={id} className='md:w-[350px] w-[450px]'>
+              <NavLink to={path} className="flex gap-2 mb-4">
+                <img src={img} alt={label} />
+                <div className='flex flex-grow justify-between text-base font-poppins font-light'>
+                  <span>{label}</span>
+                  <span className={color ? 'text-[#19B500] text-base font-poppins font-medium' : ''}>
+                    {profileData}
+                  </span>
+                </div>
+              </NavLink>
+            </li>
+          )
+        })
+      }
+    </ul>
+  );
 }
 
-export default Profile
+export default Profile;

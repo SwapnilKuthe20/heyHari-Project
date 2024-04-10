@@ -1,45 +1,19 @@
-import Sidebar from "./Common_Components/Sidebar";
-import { Home, Dashboard, Invetory, Create, Search, Profile, Notification, CustomerCare } from './Components/Links';
-import { homeIcon, dashboardIcon, inventoryIcon, createIcon, searchIcon, profileIcon, notificationIcon } from './Assets/Icons';
-import { customerCareImage } from './Assets/Images';
-import { Routes, Route } from 'react-router-dom';
-import ShowListOfComponent from "./ShowListOfComponent/ShowListOfComponent";
+import React from 'react'
 import LogIn from "./Components/LogIn";
+import { Routes, Route } from 'react-router-dom';
+import DashboardRoutes from './AdminSide/DashboardRoutes';
 
 function App() {
-  const NavLinks = [
-    { path: "/", component: Home, element: "Home", icon: homeIcon },
-    { path: "/dashboard", component: Dashboard, element: "Dashboard", icon: dashboardIcon },
-    { path: "/invetory", component: Invetory, element: "Invetory", icon: inventoryIcon },
-    { path: "/create", component: Create, element: "Create", icon: createIcon },
-    { path: "/search", component: Search, element: "Search", icon: searchIcon },
-    { path: "/profile", component: Profile, element: "Profile", icon: profileIcon },
-    { path: "/notification", component: Notification, element: "Notification", icon: notificationIcon },
-    { path: "/customerCare", component: CustomerCare, element: "CustomerCare", icon: customerCareImage },
-  ]
-
   return (
     <>
-      <div className="flex">
-        <Sidebar NavLinks={NavLinks} />
-        <Routes>
-          {
-            NavLinks?.map((links, index) => {
-              return (
-                <Route key={index} exact path={links?.path} element={<links.component />} className="" />
-              )
-            })
-          }
-        </Routes>
-        <ShowListOfComponent />
-      </div>
+      <Routes>
+        <Route path="/" element={<LogIn />} />
+      </Routes>
 
-
-      <LogIn />
+      <DashboardRoutes />
 
     </>
-  );
+  )
 }
 
-export default App;
-
+export default App

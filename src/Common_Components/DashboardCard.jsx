@@ -10,17 +10,17 @@ function DashboardCard({ handleClick, activeCard, InfoCarddata }) {
 
           if (catagory === 'My Orders Value') {
             return (
-              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px], h-[150px] bg-card-1 bg-cover border-2 text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''}`} >
+              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px] h-[150px] bg-card-1 bg-cover text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''}`} >
                 <div className=' w-9/12 m-auto'>
                   <ul className='' >
                     {
                       items?.map((element, index) => {
                         const { orderStatus, totalTransaction } = element
                         return (
-                            <div key={index} className='flex justify-between '>
-                              <li>{orderStatus}</li>
-                              <li>{totalTransaction}</li>
-                            </div>
+                          <div key={index} className='flex justify-between '>
+                            <li>{orderStatus}</li>
+                            <li>{totalTransaction}</li>
+                          </div>
                         )
                       })
                     }
@@ -33,7 +33,7 @@ function DashboardCard({ handleClick, activeCard, InfoCarddata }) {
 
           if (catagory === 'Inventory') {
             return (
-              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px], h-[150px] bg-card-2 bg-cover border-2 text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''} `} >
+              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px] h-[150px] bg-card-2 bg-cover text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''} `} >
                 <div className=' w-9/12 m-auto'>
                   <ul className='' >
                     {
@@ -56,14 +56,13 @@ function DashboardCard({ handleClick, activeCard, InfoCarddata }) {
             )
           }
 
-
           if (catagory === 'Collections') {
             return (
-              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px], h-[150px] bg-card-3 bg-cover border-2 text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''}`} >
+              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px] h-[150px] bg-card-3 bg-cover text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''}`} >
                 <div className=' w-9/12 m-auto'>
                   <ul className='' >
                     {
-                      items?.map((element,index) => {
+                      items?.map((element, index) => {
                         const { collectionStatus, collectionTransaction } = element
                         return (
                           <>
@@ -77,14 +76,14 @@ function DashboardCard({ handleClick, activeCard, InfoCarddata }) {
                     }
                   </ul>
                 </div>
-                  <h2 className='text-base font-black block m-auto'>{catagory}</h2>
+                <h2 className='text-base font-black block m-auto'>{catagory}</h2>
               </div >
             )
           }
 
           if (catagory === 'Post Insights') {
             return (
-              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px], h-[150px] bg-card-4 bg-cover border-2 text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''} `} >
+              <div key={id} onClick={() => handleClick(id)} className={`flex flex-col w-[243px] h-[150px] bg-card-4 bg-cover text-[10px] text-white rounded-xl ${activeCard === id ? 'ring-4 ring-[#4F8BED] ring-inset' : ''} `} >
                 <div className=' w-9/12 m-auto'>
                   <ul className='' >
                     {
@@ -102,7 +101,7 @@ function DashboardCard({ handleClick, activeCard, InfoCarddata }) {
                     }
                   </ul>
                 </div>
-                  <h2 className='text-base font-black block m-auto'>{catagory}</h2>
+                <h2 className='text-base font-black block m-auto'>{catagory}</h2>
               </div >
             )
           }

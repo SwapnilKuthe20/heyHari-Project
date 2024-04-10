@@ -1,19 +1,19 @@
-
 import React from 'react';
 
-function Textfield({placeholder,type,name,value ,handleChange} ) {
+function Textfield({ placeholder, type, id, name, value, onChange, style, disabled }) {
   return (
-    <div className='mt-4 ms-4'>
-     <input 
-     className=' border-2 p-2 rounded-lg w-3/2'
-     type={type} 
-     placeholder={placeholder} 
-     name={name} 
-     value={value}
-     onChange={handleChange} 
-     />
+    <div className=''>
+      <input
+        className={`border border-[#A5A5A5] rounded-lg focus:outline-none  ${style}`}
+        id={id}
+        type={type}
+        placeholder={placeholder}
+        name={name}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
+      />
     </div>
   );
 }
-
 export default Textfield;
