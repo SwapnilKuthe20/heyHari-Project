@@ -5,3 +5,5 @@ export {default as createIcon } from './create.svg';
 export {default as searchIcon } from './search.svg';
 export {default as profileIcon } from './profile.svg';
 export {default as notificationIcon } from './notification.svg';
+export {default as filterIcon } from './filterIcon.svg';
+export {default as check } from './check-circle.svg';

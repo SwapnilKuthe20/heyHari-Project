@@ -4,7 +4,7 @@ function Button ({buttonComp}){
  
   return (
     <>
-      <Button className="bg-black">{buttonComp.tittle}</Button>
+      <Button className="bg-black">{buttonComp.title}</Button>
     </>
   );
 }

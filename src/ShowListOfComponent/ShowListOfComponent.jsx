@@ -18,16 +18,13 @@ function ShowListOfComponent() {
             <ToggleButtonMain />
             <RoundedButtonMain />
             <ProductTableMain />
-            <DashboardCard/>
-            <Dropdown/>
+            <DashboardCard />
+            <Dropdown />
             <CommonComponents />
-            <Homepage/>
+            <Homepage />
             <DashboardCardMain />
             <TextAreaFieldMain />
-
-
         </div>
     )
 }
-
 export default ShowListOfComponent

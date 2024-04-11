@@ -113,7 +113,7 @@ function CommonComponents() {
         })}
       </Routes>
 
-      <Textfield name={"name"} className placeholder={"phone"} type={"tel"} value={input.name} handleChange={handleChange} />
+      <Textfield name={"name"} className={""} placeholder={"phone"} type={"tel"} value={input.name} handleChange={handleChange} />
       <RoundedImage imageUrls={imageUrls} alt={"rounded_image"} />
       <Badge value={dummydata.length} className={"top-[135px] left-12 "} />
       <SquareButtons type="submit" onClick={handleClick} title="My Buyers" isActive={isActive} />

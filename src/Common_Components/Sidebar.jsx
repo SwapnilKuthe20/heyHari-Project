@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { logoImage } from '../Assets/Images';
-import { homeIcon, dashboardIcon, inventoryIcon, createIcon, searchIcon, profileIcon, notificationIcon } from '../Assets/Icons';
+import { homeIcon, dashboardIcon, inventoryIcon, createIcon, searchIcon, profileIcon, notificationIcon } from '../Assets/Icons/indexIcon';
 import { customerCareImage } from '../Assets/Images'
 
 function Sidebar() {

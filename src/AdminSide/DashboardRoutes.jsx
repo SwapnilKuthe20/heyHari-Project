@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Dashboards from './Dashboards';
-import { Create, CustomerCare, Dashboard, Home, Invetory, Notification, Profile, Search } from '../Components/Links';
+import { Create, CustomerCare, Dashboard, Home, Inventory, Notification, Profile, Search } from '../Components/Links';
 import MyProfile from '../Components/MyProfile';
+import MyWalletMain from '../Components/MyWalletMain';
 
 const NavLinks = [
     { path: '/home', component: Home, title: 'Home' },
@@ -10,10 +11,11 @@ const NavLinks = [
     { path: '/create', component: Create, title: 'Create' },
     { path: '/search', component: Search, title: 'Search' },
     { path: '/profile', component: Profile, title: 'Profile' },
-    { path: '/inventory', component: Invetory, title: 'Invetory' },
+    { path: '/inventory', component: Inventory, title: 'Inventory' },
     { path: '/notification', component: Notification, title: 'Notification' },
     { path: '/customerCare', component: CustomerCare, title: 'CustomerCare' },
-    { path: '/myprofile', component: MyProfile, title: 'MyProfile' },
+    { path: '/profile/myprofile', component: MyProfile, title: 'MyProfile' },
+    { path: '/profile/mywallet', component: MyWalletMain, title: 'MyWalletMain' },
 ]
 
 function DashboardRoutes() {

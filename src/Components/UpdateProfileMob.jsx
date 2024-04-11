@@ -48,7 +48,7 @@ function UpdateProfileMob() {
                             <label htmlFor="phoneNo" className='text-sm font-normal text-[#646464] '>Phone Number*</label>
                             <div className='flex items-center gap-3 '>
                                 <Textfield id='phoneNo' name="phoneNo" className={'w-96'} placeholder={"+91 9876543210"} type={"tel"} value={addNo.phoneNo} onChange={handleChange} />
-                                <RoundedButton tittle={"Send OTP"} disabled={true} color={"#EBF2FF"} onClick={handleAdditionalNo} className={'w-[77px] p-2 text-xs  bg-[#4F8BED] text-white rounded-lg '} />
+                                <RoundedButton title={"Send OTP"} disabled={true} color={"#EBF2FF"} onClick={handleAdditionalNo} className={'w-[77px] p-2 text-xs  bg-[#4F8BED] text-white rounded-lg '} />
                             </div>
                         </div>
 
@@ -57,7 +57,7 @@ function UpdateProfileMob() {
                             <div className='flex gap-3 items-center'>
                                 <Textfield id='otp' name="otp" className={'w-96'} placeholder={"123456"} type={"tel"} value={addNo.otp} onChange={handleChange} />
                                 <RoundedButton
-                                    tittle={"Verify"} color={'red'} onClick={handleOTP}
+                                    title={"Verify"} color={'red'} onClick={handleOTP}
                                     disabled={disable}
                                 className={`w-[77px] p-2 text-xs ${addNo.otp =='' ?'bg-[#646464]' : 'bg-[#4F8BED]'}  bg-[#4F8BED] text-white rounded-lg `} />
                             </div>

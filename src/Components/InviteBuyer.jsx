@@ -12,7 +12,7 @@ function InviteBuyer() {
                 <div className='w-full flex justify-between px-10 '>
                     <h1 className='text-base font-medium'>Invite Buyers</h1>
                     <div className='max-w-[470px] '>
-                        <Textfield name={"name"} className placeholder={"https://heyhari.com/c/baebc423-ad1e-17a17ff8e7cd"} type={"text"} style={'w-full px-2 py-2 placeholder:text-xs '} handleChange={handleChange} />
+                        <Textfield name={"name"} placeholder={"https://heyhari.com/c/baebc423-ad1e-17a17ff8e7cd"} type={"text"} className={'w-full px-2 py-2 placeholder:text-xs '} handleChange={handleChange} />
                         <button>
                             <p>Copy</p>
                         </button>

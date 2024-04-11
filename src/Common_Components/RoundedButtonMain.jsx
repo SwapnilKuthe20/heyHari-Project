@@ -11,7 +11,7 @@ function RoundedButtonMain() {
     
   return (
     <>
-      <RoundedButton  tittle={"Cancel"} color={"#EBF2FF"} btn={btn} handleClick={handleClick} />
+      <RoundedButton  title={"Cancel"} color={"#EBF2FF"} btn={btn} handleClick={handleClick} />
     </>
   )
 }

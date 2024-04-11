@@ -73,7 +73,7 @@ function MySegCategory() {
                         <p className='font-normal text-sm'>Preferred locations</p>
                     </div>
                     <div className='w-full text-center mb-4' >
-                        <RoundedButton tittle={"Save"} Style={"bg-[#4F8BED] text-white text-base py-[10px] rounded-[20px]  px-[190px]"} handleClick={handleClick} />
+                        <RoundedButton title={"Save"} className={"bg-[#4F8BED] text-white text-base py-[10px] rounded-[20px]  px-[190px]"} handleClick={handleClick} />
                     </div>
                     <div className=' w-96 m-auto'>
                         <p className=' text-sm font-normal'>Click to select your interests and discover a feed filled with content that resonates with you.</p>

@@ -1,13 +1,11 @@
 import React from 'react'
 
-function RoundedButton({ tittle, onClick, Style, disabled }) {
+function RoundedButton({ title, className, disabled, type, handleClick }) {
 
     return (
-        <>
-            <button className={` ${Style}  `} onClick={onClick} disabled={disabled}>
-                {tittle}
-            </button>
-        </>
+        <button type={type} className={` ${className} `} onClick={handleClick} disabled={disabled} >
+            {title}
+        </button>
     )
 }
 

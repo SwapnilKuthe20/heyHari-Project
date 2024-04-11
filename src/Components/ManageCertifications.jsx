@@ -26,12 +26,12 @@ function ManageCertifications() {
                     <h1 className='font-bold text-[#8D8D8D]  font text-xl ms-8 mb-[18px]'>Upload Authorize Certificate if any? </h1>
                     <div className='w-80 mx-auto border-dashed border border-[#1141C8] rounded-lg py-3 px-2 text-center'>
                         <div className=''>
-                            <Textfield name={"componyName"} style={'font-normal text-xs ps-2 py-[10px] w-full '} placeholder={"Company Name"} type={"text"} value={componyInput.componyName} handleChange={handleChange} />
+                            <Textfield name={"componyName"} className={'font-normal text-xs ps-2 py-[10px] w-full '} placeholder={"Company Name"} type={"text"} value={componyInput.componyName} handleChange={handleChange} />
                         </div>
                         <div className='my-2'>
-                            <Textfield name={"componyEmail"} style={'font-normal text-xs ps-2 py-[10px] w-full'} placeholder={"Company Email"} type={"email"} value={componyInput.componyEmail} handleChange={handleChange} />
+                            <Textfield name={"componyEmail"} className={'font-normal text-xs ps-2 py-[10px] w-full'} placeholder={"Company Email"} type={"email"} value={componyInput.componyEmail} handleChange={handleChange} />
                         </div>
-                        <SquareButtons type="submit" style={'bg-[#EBF2FF] font-normal text-base px-4'} onClick={handleClick} title="Browse & Upload Certificate" />
+                        <SquareButtons type="submit" className={'bg-[#EBF2FF] font-normal text-base px-4'} onClick={handleClick} title="Browse & Upload Certificate" />
                     </div>
 
                     <p className=' text-center text-[10px] mb-3 mt-2'> Maximum of ten documents can be uploaded.</p>

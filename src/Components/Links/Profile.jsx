@@ -4,8 +4,8 @@ import {myProfileLogo,walletLogo,segmentLogo,languageLogo,certificateLogo,invite
 
 function Profile() {
   const profileItems = [
-    { id: 1, path: '/myprofile', profileData: null, label: "My Profile", img: myProfileLogo },
-    { id: 2, path: '/mywallet', color: "green", profileData: '₹10143.00', label: "My Wallet", img: walletLogo },
+    { id: 1, path: '/profile/myprofile', profileData: null, label: "My Profile", img: myProfileLogo },
+    { id: 2, path: '/profile/mywallet', color: "green", profileData: '₹10143.00', label: "My Wallet", img: walletLogo },
     { id: 3, path: '/myseg', profileData: null, label: "My Segments & Categories", img: segmentLogo },
     { id: 4, path: '/mypreferredlanguage', profileData: null, label: "My Preferred Language", img: languageLogo },
     { id: 5, path: '/managecertifications', profileData: null, label: "Manage Certificates", img: certificateLogo },
@@ -19,7 +19,7 @@ function Profile() {
   ];
   
   return (
-    <ul className='ps-10 pt-10 pe-6 border-r border-[#D9D9D9]'>
+    <ul className='ps-10 pt-10 pe-6 border-r border-[#D9D9D9] me-5'>
       {
         profileItems?.map((items) => {
           const { id, path, profileData, label, img, color } = items
